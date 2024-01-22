@@ -1,0 +1,30 @@
+containers: {
+    basetool: {
+        image: "docker.io/basetool/basetool:latest"
+        ports: publish: "80/http"
+        env: {
+            BASE_URL: "@{services.basetool.endpoint}"
+            PORT: "80"
+            NEXTAUTH_URL: "https://@{services.basetool.endpoint}"
+            DATABASE_URL: "postgresql://@{service.postgres.secrets.admin.username}:@{service.postgres.secrets.admin.password}@@{service.postgres.address}:5432/@{service.postgres.data.dbName}"
+            REDIS_URL: "redis://redis:6379"
+            SENTRY_SERVER_INIT_PATH: ".next/server/sentry/initServerSDK.js"
+
+            EMAIL_FROM: "Basetool install <hi@PLEASE_UPDATE_THIS.com>"
+            SMTP_HOST: ""
+            SMTP_PORT: ""
+            SMTP_USER: ""
+            SMTP_PASSWORD: ""
+        }
+        consumes: ["postgres"]
+        dependsOn: ["redis"]
+        memory: 2Gi
+    }
+
+    redis: {
+        image: "redis"
+        ports: expose: "6379/tcp"
+    }
+}
+
+services: postgres: image: "ghcr.io/acorn-io/postgres:v15.#-#"
