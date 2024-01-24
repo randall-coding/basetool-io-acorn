@@ -57,31 +57,29 @@ Click on the basetool deployment, and find the endpoint section on the right sid
 
 ## Configure Basetool
 
-Visit the URL for your Acorn Basetool. This will lead you to the login page of Basetool.
+Visit the endpoint for your Basetool server. This will lead you to the login page of Basetool.
 
 ![basetool_sign_in](https://github.com/randall-coding/basetool-io-acorn/assets/39175191/5bb2473a-2176-4c6f-adba-a47d767dcbeb)
 
-Go to the registration page by clicking on the "Register" link on the page. Complete the form with your email address, password, organization, and other necessary details.
+Go to the registration page by clicking on the "Register" link on the page. Complete the form with your email address, password, organization, and other details.
 
 ![basetool_new_user](https://github.com/randall-coding/basetool-io-acorn/assets/39175191/47de315e-7f22-47e5-b480-d942b5532490)
 
-Then login from the login page. Upon logging in with your new account, you will arrive at the Basetool dashboard.
+You should be redirected to the login page to log in. After logging in with your new account, you should see the Basetool dashboard.
 
 ![basetool_dashboard_1](https://github.com/randall-coding/basetool-io-acorn/assets/39175191/33d9592a-2b2b-4b53-8686-419954725d41)
 
-To add a datasource from the dashboard, click on the "Add one" link. Then, select your datasource from the list and follow the on-screen instructions.
+To add an analytics datasource from the dashboard, click on the "Add one" link. Then, select your datasource from the list and follow the on-screen instructions.
 
 ![basetool_add_datasource](https://github.com/randall-coding/basetool-io-acorn/assets/39175191/4a72f2cc-1f9d-4654-b2cb-fbbec6a0151d)
 
 ### SMTP Configuration (Optional)
-If you want to configure SMTP, you can set these env values in the Acornfile:
+If you want to configure SMTP for email notifications, set these env values in the Acornfile before building the Acorn image:
 - EMAIL_FROM: **<ExampleMailer <example@example.com>>**
 - SMTP_HOST: **<Your SMTP Host>**
 - SMTP_PORT: **<SMTP Port>**
 - SMTP_USER: **<SMTP User>**
 - SMTP_PASSWORD: **<SMTP Password>**
-
-Congratulations! The Basetool installation is now complete.
 
 ## Conclusion
 That's all there is to it.  We've now got a Basetool server up and running from an acorn image.
