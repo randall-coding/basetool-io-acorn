@@ -51,28 +51,27 @@ Visit your acorn dashboard to see if your deployment was successful.
 
 Click on the basetool deployment, and find the endpoint section on the right side panel.  This is your basetool instance link.
 
-![basetool_acorn_ui]()
+![basetool_acorn_ui](https://github.com/randall-coding/basetool-io-acorn/assets/39175191/33969c77-bda4-479c-b174-bd3edb4466f4)
 
-![basetool_endpoint]()
+![basetool_endpoint](https://github.com/randall-coding/basetool-io-acorn/assets/39175191/e4308247-6bd8-4997-b132-4b19b31a59c4)
 
 ## Configure Basetool
 
 Visit the URL for your Acorn Basetool. This will lead you to the login page of Basetool.
 
-![basetool-first]()
+![basetool_sign_in](https://github.com/randall-coding/basetool-io-acorn/assets/39175191/5bb2473a-2176-4c6f-adba-a47d767dcbeb)
 
 Go to the registration page by clicking on the "Register" link on the page. Complete the form with your email address, password, organization, and other necessary details.
 
-![basetool-reg]()
+![basetool_new_user](https://github.com/randall-coding/basetool-io-acorn/assets/39175191/47de315e-7f22-47e5-b480-d942b5532490)
 
 Then login from the login page. Upon logging in with your new account, you will arrive at the Basetool dashboard.
 
-![basetool-dashboard]()
+![basetool_dashboard_1](https://github.com/randall-coding/basetool-io-acorn/assets/39175191/33d9592a-2b2b-4b53-8686-419954725d41)
 
 To add a datasource from the dashboard, click on the "Add one" link. Then, select your datasource from the list and follow the on-screen instructions.
 
-![basetool-datasource]()
-
+![basetool_add_datasource](https://github.com/randall-coding/basetool-io-acorn/assets/39175191/4a72f2cc-1f9d-4654-b2cb-fbbec6a0151d)
 
 ### SMTP Configuration (Optional)
 If you want to configure SMTP, you can set these env values in the Acornfile:
