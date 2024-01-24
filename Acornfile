@@ -15,6 +15,7 @@ containers: {
             SMTP_PORT: ""
             SMTP_USER: ""
             SMTP_PASSWORD: ""
+            SECRET: "secret://basetool/token"
         }
         consumes: ["postgres"]
         dependsOn: ["redis"]
@@ -28,3 +29,11 @@ containers: {
 }
 
 services: postgres: image: "ghcr.io/acorn-io/postgres:v15.#-#"
+
+secrets: "basetool": {
+    type: "token"
+    params: {
+        length: 64
+        characters: "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    }
+}
